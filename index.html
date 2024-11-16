@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яна, я тебя люблю!</title>
+    <style>
+        /* Общий стиль страницы */
+        body {
+            background: linear-gradient(135deg, #ff6a00, #ee0979); /* Эффект градиента */
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            animation: backgroundAnimation 5s infinite alternate;
+        }
+
+        /* Анимация для фона */
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #ff6a00, #ee0979); }
+            50% { background: linear-gradient(135deg, #ff8c00, #ff66b2); }
+            100% { background: linear-gradient(135deg, #ff6a00, #ff3399); }
+        }
+
+        /* Стиль заголовка */
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8); /* Тень для текста */
+            margin: 20px 0;
+            animation: bounce 2s infinite; /* Анимация подпрыгивания */
+            color: #ffffff;
+        }
+
+        /* Анимация для заголовка */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        /* Сердечки */
+        .hearts {
+            font-size: 4em;
+            text-align: center;
+            animation: heartbeat 1.5s infinite; /* Пульсация сердечек */
+            margin-bottom: 30px;
+        }
+
+        /* Анимация пульсации */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        /* Текст для Яны */
+        .message {
+            font-size: 2em;
+            text-align: center;
+            animation: fadeIn 3s ease-out;
+            margin-top: 20px;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        /* Анимация появления */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Подпись внизу */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            width: 100%;
+            color: #ffffff;
+            animation: fadeIn 5s ease-out; /* Эффект появления */
+        }
+
+        /* Кнопка */
+        .button {
+            background-color: #ff3399;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff66b2;
+            transform: scale(1.1);
+        }
+
+        /* Летающие частички для волшебного эффекта */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: moveParticles 2s infinite ease-in-out;
+        }
+
+        @keyframes moveParticles {
+            0% { transform: translate(0, 0); opacity: 1; }
+            100% { transform: translate(200px, 200px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Яна, спасибо за то, что ты есть!</h1>
+        <div class="hearts">
+            💖 💖 💖 💖 💖 💖 💖 💖 💖 💖<br>
+            💖 💖 💖 💖 💖 💖 💖 💖 💖 💖<br>
+            💖 💖 💖 💖 💖 💖 💖 💖 💖 💖<br>
+        </div>
+        <div class="message">
+            За твою доброту и заботу, за каждый момент, проведённый с тобой.<br>
+             Спасибо за то, что ты появилась в моей жизни! 💕
+        </div>
+        <button class="button" onclick="alert('Ты — моя любовь навсегда! 💖')">Ты — моё счастье!</button>
+        <div class="footer">Ты — самая лучшая! 💖</div>
+    </div>
+
+    <!-- Летающие частички для волшебного эффекта -->
+    <div class="particles">
+        <div class="particle" style="width: 10px; height: 10px; left: 10%; animation-delay: 0.5s;"></div>
+        <div class="particle" style="width: 12px; height: 12px; left: 30%; animation-delay: 1s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; left: 50%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="width: 14px; height: 14px; left: 70%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; left: 90%; animation-delay: 2.5s;"></div>
+    </div>
+
+</body>
+</html>
